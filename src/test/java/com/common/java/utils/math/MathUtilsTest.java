@@ -41,7 +41,7 @@ public class MathUtilsTest {
 
     @Test
     public void judge(){
-        List<OperatorEnum> list = CollectionsUtils.listBuilder(6)
+        List<OperatorEnum> list = CollectionsUtils.<OperatorEnum>listBuilder(6)
                 .add(OperatorEnum.GE)
                 .add(OperatorEnum.GT)
                 .add(OperatorEnum.EQ)

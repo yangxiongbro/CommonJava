@@ -18,8 +18,12 @@ public class CollectionsUtils {
         return new MapBuilder<>(initialCapacity);
     }
 
-    public static <E> ListBuilder listBuilder(int initialCapacity) {
+    public static <E> ListBuilder<E> listBuilder(int initialCapacity) {
         return new ListBuilder<>(initialCapacity);
+    }
+
+    public static <E> SetBuilder<E> setBuilder(int initialCapacity) {
+        return new SetBuilder<>(initialCapacity);
     }
 
     public static class MapBuilder<K, V> {
@@ -58,4 +62,28 @@ public class CollectionsUtils {
         }
 
     }
+
+    public static class SetBuilder<E> {
+
+        private final Set<E> set;
+
+        SetBuilder(int initialCapacity) {
+            set = new HashSet<>(initialCapacity);
+        }
+
+        public SetBuilder<E> add(E element) {
+            this.set.add(element);
+            return this;
+        }
+
+        public Set<E> build() {
+            return this.set;
+        }
+
+    }
+
+    public static boolean isEmpty(Collection<?> collection) {
+        return collection == null || collection.isEmpty();
+    }
+
 }

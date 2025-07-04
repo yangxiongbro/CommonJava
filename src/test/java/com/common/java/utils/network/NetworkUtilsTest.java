@@ -17,7 +17,7 @@ import java.util.List;
  * @since CommonJava 0.1.0
  */
 public class NetworkUtilsTest {
-    private List<String> list = CollectionsUtils.listBuilder(10)
+    private List<String> list = CollectionsUtils.<String>listBuilder(10)
             .add("0.0.0.0")
             .add("255.255.255.255")
             .add("10.253.98.210")
@@ -29,7 +29,7 @@ public class NetworkUtilsTest {
             .add(null)
             .build();
 
-    private List<String> hexList = CollectionsUtils.listBuilder(10)
+    private List<String> hexList = CollectionsUtils.<String>listBuilder(10)
             .add("0")
             .add("ffffffff")
             .add("afd62d2")
@@ -39,14 +39,14 @@ public class NetworkUtilsTest {
             .add(null)
             .build();
 
-    private List<Long> decLongList = CollectionsUtils.listBuilder(10)
+    private List<Long> decLongList = CollectionsUtils.<Long>listBuilder(10)
             .add(0L)
             .add(4294967295L)
             .add(184378066L)
             .add(null)
             .build();
 
-    private List<BigDecimal> decList = CollectionsUtils.listBuilder(10)
+    private List<BigDecimal> decList = CollectionsUtils.<BigDecimal>listBuilder(10)
             .add(new BigDecimal(0))
             .add(new BigDecimal(4294967295L))
             .add(new BigDecimal(184378066))

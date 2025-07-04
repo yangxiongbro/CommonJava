@@ -11,6 +11,8 @@ package com.common.java.exception.base.business;
  */
 public enum CommonResponseEnum implements ICommonExceptionFactory {
 
+    THROW_EXCEPTION(1000010, "{0}"),
+
     /**
      * Continue
      * 继续
@@ -136,7 +138,7 @@ public enum CommonResponseEnum implements ICommonExceptionFactory {
     /**
      * 参数异常
      */
-    ARGUE_ERROR(4000010, null),
+    ARGUE_ERROR(4000010, "参数异常：{0}"),
 
     /**
      * 参数校验异常

@@ -1,4 +1,4 @@
-package com.common.java.thread;
+package com.common.java.utils.thread;
 
 import org.junit.jupiter.api.Test;
 
@@ -12,10 +12,10 @@ import org.junit.jupiter.api.Test;
  * @author yang xiong
  * @since CommonJava 1.0
  */
-public class ThreadsToolsTest {
+public class ThreadUtilsTest {
 
     @Test
     public void sleep(){
-        ThreadsTools.sleep(1000);
+        ThreadUtils.sleep(1000);
     }
 }
